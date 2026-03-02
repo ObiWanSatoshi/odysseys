@@ -28,7 +28,7 @@
     />
     <style>
       :root {
-        --bg: #040507;
+        --bg: #000;
         --text: #ececf2;
         --muted: #b6b9c5;
         --line: rgba(255, 255, 255, 0.18);
@@ -161,6 +161,7 @@
         display: flex;
         align-items: center;
         padding: clamp(46px, 8vh, 84px) 0;
+        background: #000;
       }
 
       .voyage {
@@ -213,7 +214,7 @@
         position: relative;
         border-top: 1px solid var(--line-soft);
         border-bottom: 1px solid var(--line-soft);
-        background: #05070c;
+        background: #000;
         overflow: hidden;
       }
 
@@ -223,7 +224,7 @@
         display: block;
         width: 100%;
         height: 100%;
-        background: #05070c;
+        background: #000;
         transition: opacity 180ms ease;
         pointer-events: none;
         z-index: 2;
@@ -1072,7 +1073,7 @@
             displayCtx.font = `${fontPx}px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace`;
             displayCtx.textBaseline = "top";
             displayCtx.clearRect(0, 0, innerW, innerH);
-            displayCtx.fillStyle = "#05070c";
+            displayCtx.fillStyle = "#000";
             displayCtx.fillRect(0, 0, innerW, innerH);
 
             sampleCanvas.width = cols;
@@ -1125,7 +1126,7 @@
               return;
             }
 
-            displayCtx.fillStyle = "#05070c";
+            displayCtx.fillStyle = "#000";
             displayCtx.fillRect(0, 0, innerW, innerH);
 
             const lums = new Float32Array(cols * rows);
@@ -1922,6 +1923,7 @@
         initGate();
         initFlowText();
         initAzoresAsciiBanner();
+        updateOverviewLockArm();
 
         snapRoot.addEventListener("wheel", onWheel, { passive: false });
         window.addEventListener("keydown", onKeydown, { passive: false });
