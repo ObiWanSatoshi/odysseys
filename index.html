@@ -918,7 +918,7 @@
             <h3 class="section-title">Confirm Participation</h3>
             <a
               class="confirm-link"
-              href="https://docs.google.com/forms/"
+              href="https://forms.gle/E3GHJfssMkM5VYow8"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -1884,9 +1884,9 @@
 
           gateForm.addEventListener("submit", (event) => {
             event.preventDefault();
-            const value = gateInput.value.trim().toLowerCase();
+            const value = gateInput.value.trim();
 
-            if (value !== "odyssey") {
+            if (value !== "Odyssey26!") {
               gateError.classList.add("show");
               window.clearTimeout(errorTimer);
               errorTimer = window.setTimeout(() => gateError.classList.remove("show"), 1400);
